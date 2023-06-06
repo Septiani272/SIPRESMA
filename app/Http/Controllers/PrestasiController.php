@@ -79,7 +79,7 @@ class PrestasiController extends Controller
         $prestasi->delete();
 
         Alert::success('Berhasil', 'prestasi telah di hapus');
-        return redirect('user/prestasi');
+        return redirect('user/prestasi/proses');
     }
     
 }

@@ -63,7 +63,22 @@ Dashboard
                         </th> 
                     </tr>
                     <tr>
-                        <th class="text-left text-sm text-gray-500">Waktu Perolehan</th>
+                      <th class="text-left text-sm text-gray-500">Tanggal Mulai Kegiatan</th>
+                      <th class="text-gray-500">:</th>
+                      <th class="flex items-center justify-between text-sm font-bold leading-5 text-black-600 rounded-lg dark:text-purple-400 focus:outline-none focus:shadow-outline-gray" aria-label="Detail">
+                        {{ \Carbon\Carbon::parse($item->tgl_mulai)->format('d, F Y') }}
+                      </th>
+                    </tr>
+                  <tr>
+                    <th class="text-left text-sm text-gray-500">Tanggal Selesai Kegiatan</th>
+                    <th class="text-gray-500">:</th>
+                    <th class="flex items-center justify-between text-sm font-bold leading-5 text-black-600 rounded-lg dark:text-purple-400 focus:outline-none focus:shadow-outline-gray" aria-label="Detail">
+                      {{ \Carbon\Carbon::parse($item->tgl_selesai)->format('d, F Y') }}
+                    </th>
+                  </tr>
+                  
+                    <tr>
+                        <th class="text-left text-sm text-gray-500">Tahun Perolehan</th>
                         <th class="text-gray-500 ">:</th>
                         <th class="flex items-center justify-between  text-sm font-bold leading-5 text-black-600 rounded-lg dark:text-purple-400 focus:outline-none focus:shadow-outline-gray"
                         aria-label="Detail">{{ $item->waktu_perolehan }}</th>

@@ -68,6 +68,8 @@ class MahasiswaController extends Controller
         $data['nama_kegiatan'] = $request->nama_kegiatan;
         $data['bukti'] = $request->bukti;
         $data['waktu_perolehan'] = $request->waktu_perolehan;
+        $data['tgl_mulai'] = $request->tgl_mulai;
+        $data['tgl_selesai'] = $request->tgl_selesai;
         $data['tingkat'] = $request->tingkat;
         $data['jumlah_PT'] = $request->jumlah_PT;
         $data['jumlah_peserta'] = $request->jumlah_peserta;

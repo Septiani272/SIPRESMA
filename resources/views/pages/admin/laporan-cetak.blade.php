@@ -55,24 +55,26 @@
 <body>
   <div class="container mt-5">
     <div class="row justify-content-center">
-      <div class="col">
-        <img src="{{ asset('img/unib4.png')}}" alt="">
+      <div class="col text-center">
+        <img src="{{ asset('img/unib4.png')}}" alt="" style="width: 200px;">
       </div>
-      <div class="col-md-auto " style="letter-spacing: 1px;">
-        <div class="title text-center">
-          <h4>KEMENTERIAN PENDIDIKAN, KEBUDAYAAN </h4>
-          <h4>RISET DAN TEKNOLOGI</h4>
-          <h4>UNIVERSITAS BENGKULU</h4>
-          <px>FAKULTAS TEKNIK</px>
-          <p style="margin-bottom: 1px;"> Jalan W.R. Supratman Kandang Limun Bengkulu 38371</p>
-          <P style="margin-bottom: 1px;">Telepon (0736) 344087 Ext. 308 Faksimile (0736)349134</P>
-          <p> Laman : ft.unib.ac.id e-mail:ft@unib.ac.id</p> 
+      <div class="col-md-auto text-center" style="letter-spacing: 1px;">
+        <div class="title">
+          <h4 style="margin-bottom: 5px; font-weight: 500;">KEMENTERIAN PENDIDIKAN, KEBUDAYAAN, </h4>
+          <h4 style="margin-bottom: 5px; font-weight: 500;">RISET DAN TEKNOLOGI</h4>
+          <h4 style="margin-bottom: 5px; font-weight: 500;">UNIVERSITAS BENGKULU</h4>
+          <h4 style="margin-bottom: 5px; font-weight: bold;">FAKULTAS TEKNIK</h4>
+          <p style="margin-bottom: 2px;">Jalan W.R. Supratman Kandang Limun Bengkulu 38371</p>
+          <P style="margin-bottom: 2px;">Telepon (0736) 344087 Ext. 308 Faksimile (0736) 349134</P>
+          <p style="margin-bottom: 0;">Laman: ft.unib.ac.id Email: ft@unib.ac.id</p> 
         </div>
       </div>
       <div class="col"></div>
     </div>
     
-    <hr class="solid mt-1 mb-6">
+    
+    <hr class="solid mt-2 mb-6">
+    
     <div>
       <h2 style="font-family: 'Times New Roman', Times, serif; text-align: center;" class="mb-4">Laporan Prestasi Mahasiswa Fakultas Teknik</h2>
 
