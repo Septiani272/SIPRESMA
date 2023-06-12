@@ -58,7 +58,7 @@ Route::prefix('admin')
         Route::get('/users/search', 'AdminController@search')->name('users.search');
         Route::post('/mahasiswa/{npm}', 'AdminController@destroy')->name('mahasiswa.destroy');
         Route::post('/edit/{npm}', 'AdminController@update')->name('mahasiswa.update');
-        Route::get('editMahasiswa/{npm}', [AdminController:: class, 'edit']);
+        Route::get('editMahasiswa/{npm}', [AdminController:: class, 'edit'])->name('mahasiswa.edit');
 
 });
 

@@ -85,19 +85,21 @@
   </div>
     
     <div>
-      <h5 style="font-family: 'Times New Roman', Times, serif; text-align: center;" class="mb-4"> DAFTAR DATA PRESTASI MAHASISWA</h5>
-      <h5 style="font-family: 'Times New Roman', Times, serif; text-align: center;" class="mb-4">FAKULTAS TEKNIK UNIVERSITAS BENGKULU </h5>
+      <h5 style="font-family: 'Times New Roman', Times, serif; text-align: center;" class="mb-4 font-weight-bold"> DAFTAR DATA PRESTASI MAHASISWA</h5>
+      <h5 style="font-family: 'Times New Roman', Times, serif; text-align: center;" class="mb-4 font-weight-bold">FAKULTAS TEKNIK UNIVERSITAS BENGKULU </h5>
 
     </div>
     <table class="table table-bordered">
       <thead class="thead ">
         <tr>
           <th scope="col">No</th>
+          <th scope="col">Program Studi</th>
+          <th scope="col">NPM</th>
           <th scope="col">Nama Mahasiswa</th>
-          <th scope="col">Nama Kegiatan</th>
-          <th scope="col">Tahun</th>
+          <th scope="col">Tingkat Juara</th>
+          <th scope="col">Nama Kompetisi</th>
           <th scope="col">Tingkat</th>
-          <th scope="col">Prestasi Yang Dicapai</th>
+         
          
           {{-- <th scope="col">Status</th> --}}
         </tr>
@@ -110,11 +112,13 @@
           
         <tr>
           <td>{{ $no ++ }} </td>
+          <td>{{ $item->user_prodi }}</td>
+          <td>{{ $item->user_npm }}</td>
           <td>{{ $item->user_name }}</td>
-          <td>{{ $item->nama_kegiatan }}</td>
-          <td>{{ $item->waktu_perolehan }}</td>
-          <td>{{ $item->tingkat}}</td>
           <td>{{ $item->prestasi_yg_dicapai }}</td>
+          <td>{{ $item->nama_kegiatan }}</td>
+          <td>{{ $item->tingkat}}</td>
+     
          
 
         </tr>

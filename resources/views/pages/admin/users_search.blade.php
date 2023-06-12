@@ -20,8 +20,10 @@ Data Mahasiswa
               <th class="px-4 py-3">No</th>
               <th class="px-4 py-3">Nama</th>
               <th class="px-4 py-3">NPM</th>
+              <th class="px-4 py-3">Jenis Kelamin</th>
               <th class="px-4 py-3">No. Hp</th>
               <th class="px-4 py-3">Program Studi</th>
+              <th class="px-4 py-3">Aksi</th>
             </tr>
           </thead>
           <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
@@ -36,11 +38,44 @@ Data Mahasiswa
                 {{ $user->npm }}
               </td>
               <td class="px-4 py-3 text-sm">
+                {{ $user->jenis_kelamin }}
+              </td>
+              <td class="px-4 py-3 text-sm">
                 0{{ $user->phone }}
               </td>
               <td class="px-4 py-3 text-sm">
                 {{ $user->prodi }}
               </td>
+              <td>
+                {{-- <a href="{{ route('kebakaran.print', $kebakaran->id) }}" class="btn btn-info btn-sm"
+                    target="_blank">
+                    <i class="fas fa-print"></i>
+                </a> --}}
+               
+              <form action="{{ route('mahasiswa.edit', $user->npm) }}" method="get"
+                class="d-inline-block">
+                @csrf
+                @method('get')
+                <button type="submit"
+                   
+                   <span class="items-center justify-between text-sm font-medium leading-5 text-green-600 rounded-lg dark:text-green-600 focus:outline-none focus:shadow-outline-gray" aria-label="Detail">
+                    Edit</span>
+                </button>
+            </form>
+              
+                
+                <form action="{{ route('mahasiswa.destroy', $user->npm) }}" method="POST"
+                    class="d-inline-block">
+                    @csrf
+                    @method('post')
+                    <button type="submit"
+                        onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')"
+                        class="btn btn-danger btn-sm">
+                       <span class=" items-center justify-between  text-sm font-medium leading-5 text-red-600 rounded-lg dark:text-red-600 focus:outline-none focus:shadow-outline-gray" aria-label="Detail">
+                        Hapus</span>
+                    </button>
+                </form>
+            </td>
             </tr>
             @empty
             <tr>

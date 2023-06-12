@@ -109,7 +109,7 @@ Data Mahasiswa
                 <form action="{{ route('mahasiswa.destroy', $mahasiswa->npm) }}" method="POST"
                     class="d-inline-block">
                     @csrf
-                    @method('DELETE')
+                    @method('POST')
                     <button type="submit"
                         onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')"
                         class="btn btn-danger btn-sm">

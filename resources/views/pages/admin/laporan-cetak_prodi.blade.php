@@ -54,27 +54,31 @@
 
 <body>
   <div class="container mt-5">
-    <div class="row justify-content-center">
+    <div class="row align-items-center">
       <div class="col">
-        <img src="{{ asset('img/unib4.png')}}" alt="">
+          <img src="{{ asset('img/unib4.png') }}" alt="Kota Bengkulu.png"
+              class="img-fluid"  />
       </div>
-      <div class="col-md-auto " style="letter-spacing: 1px;">
-        <div class="title text-center">
-          <h4>KEMENTERIAN PENDIDIKAN, KEBUDAYAAN </h4>
-          <h4>RISET DAN TEKNOLOGI</h4>
-          <h4>UNIVERSITAS BENGKULU</h4>
-          <px>FAKULTAS TEKNIK</px>
-          <p style="margin-bottom: 1px;"> Jalan W.R. Supratman Kandang Limun Bengkulu 38371</p>
-          <P style="margin-bottom: 1px;">Telepon (0736) 344087 Ext. 308 Faksimile (0736)349134</P>
-          <p> Laman : ft.unib.ac.id e-mail:ft@unib.ac.id</p> 
-        </div>
+      <div class="col-10">
+          <div style="transform: translateX(-2rem)">
+              <h4 class="text-center"style="margin-bottom: 5px;">KEMENTERIAN PENDIDIKAN, KEBUDAYAAN,</h4>
+              <h4 class="text-center"style="margin-bottom: 5px;">RISET DAN TEKNOLOGI,</h4>
+              <h4 class="text-center" style="margin-bottom: 5px;">UNIVERSITAS BENGKULU</hclass=>
+              <h4 class="text-center font-weight-bold" style="margin-bottom: 5px;">FAKULTAS TEKNIK</h4>
+              <!-- <h1 class="text-center">KELURAHAN TENGAH PADANG</h1> -->
+              <p class="text-center"style="margin-bottom: 0;" >Jalan W.R. Supratman Kandang Limun Bengkulu 38371</p>
+              <p class="text-center"style="margin-bottom: 0;" >Telepon (0736) 344087 Ext. 308 Faksimile (0736) 349134</p>
+              <p class="text-center" style="margin-bottom: 0;" >Laman: ft.unib.ac.id e-mail: ft@unib.ac.id</p>
+          </div>
+
       </div>
-      <div class="col"></div>
-    </div>
-    
-    <hr class="solid mt-1 mb-6">
+  </div>
+  <div class="line" style="margin-top: -1rem">
+    <hr style="border:3px solid #000">
+    <hr style="border:.5px solid #000; margin-top: -15px">
+</div>
     <div>
-      <h2 style="font-family: 'Times New Roman', Times, serif; text-align: center;" class="mb-4">Laporan Prestasi Mahasiswa Fakultas Teknik</h2>
+      <h5 style="font-family: 'Times New Roman', Times, serif; text-align: center;" class="mb-4 font-weight-bold">Laporan Prestasi Mahasiswa Fakultas Teknik</h5>
 
     </div>
     <table class="table table-bordered">

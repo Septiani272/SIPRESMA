@@ -37,6 +37,9 @@ Data Prestasi
             </tr>
           </thead>
           <tbody class="  bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+            @php
+            $no = 1; 
+          @endphp
             @forelse ($items as $index =>$item)
             
             <tr class="text-center text-gray-700 dark:text-gray-400">
@@ -83,7 +86,14 @@ Data Prestasi
               <td class="px-4 py-3 text-xs item-center">
                 
                 <a href="detailprestasi/{{$item->id}}" class=" items-center justify-between  text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-purple-600 focus:outline-none focus:shadow-outline-gray" aria-label="Detail">
-                  Detail</a>
+                 Detail
+                  {{-- <svg class="w-5 h-5 text-center" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg> --}}
+                </a>
                 
               
                 <form action="{{ $item->status != 'selesai' ? route('prestasi.destroy', $item->id) : '#' }}" method="POST">
