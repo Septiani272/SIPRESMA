@@ -70,9 +70,9 @@
          ->where('user_npm', auth()->user()->npm)
          ->count();
      @endphp
-     <li class="relative px-4 py-2">
+     <li class="relative ">
       <a class="" href="{{ url('user/prestasi/perbaiki')}}">
-        <i class="fas fa-bell w-6 h-6" style="color: red;"></i>
+        <i class="fas fa-bell w-5 h-5" style="color: #e57342;"></i>
         @if ($jumlahPrestasiPerluDiperbaiki > 0)
           <span class="absolute inline-flex items-center justify-start  text-xs font-bold leading-none text-red ">{{ $jumlahPrestasiPerluDiperbaiki }}</span>
         @endif

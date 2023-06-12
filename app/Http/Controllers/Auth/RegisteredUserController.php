@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Validation\Rules\Unique;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Validator;
 
 class RegisteredUserController extends Controller
 {
@@ -31,33 +34,40 @@ class RegisteredUserController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store(Request $request)
-    {
-        // dd($request->all());
-        $request->validate([
-            'npm' => 'required|string|min:9|max:9',
-            'name' => 'required|string|max:255',
-            'prodi'=>'required',
-            'jenis_kelamin'=>'required',
-            'phone' => 'required|numeric|min:10',
-            'password' => 'required|string|min:8',
-            
-        ]);
+   public function store(Request $request)
+{
+    $validator = Validator::make($request->all(), [
+        'npm' => [
+            'required',
+            'string',
+            'min:9',
+            'max:9',
+            Rule::unique('users', 'npm'),
+        ],
+        'name' => 'required|string|max:255',
+        'prodi' => 'required',
+        'jenis_kelamin' => 'required',
+        'phone' => 'required|numeric|min:10',
+        'password' => 'required|string|min:8',
+        
+    ]);
 
-        Auth::login($user = User::create([
-            'npm' => $request->npm,
-            'name' => $request->name, 
-            'remember_token'=> Str::random(60),
-            'prodi' => $request->prodi,
-            'jenis_kelamin' => $request->jenis_kelamin,
-            'phone' => $request->phone,
-            'password' => Hash::make($request->password),
-           
-            
-        ]));
-
-        event(new Registered($user));
-
-        return redirect(RouteServiceProvider::HOME);
+    if ($validator->fails()) {
+        return redirect()->back()->withErrors($validator)->withInput();
     }
+
+    Auth::login($user = User::create([
+        'npm' => $request->npm,
+        'name' => $request->name,
+        'remember_token' => Str::random(60),
+        'prodi' => $request->prodi,
+        'jenis_kelamin' => $request->jenis_kelamin,
+        'phone' => $request->phone,
+        'password' => Hash::make($request->password),
+    ]));
+
+    event(new Registered($user));
+
+    return redirect(RouteServiceProvider::HOME)->with('success', 'Data pengguna berhasil disimpan.');
+}
 }

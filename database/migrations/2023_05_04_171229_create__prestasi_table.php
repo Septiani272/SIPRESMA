@@ -23,8 +23,8 @@ class CreateprestasiTable extends Migration
             $table->string('nama_kegiatan');
             $table->enum('prestasi_yg_dicapai',['Juara I','Juara II', 'Juara III','Harapan I','Harapan II','Harapan III']);
             $table->YEAR('waktu_perolehan');
-            $table->date('tgl_mulai');
-            $table->date('tgl_selesai');
+            $table->date('tgl_mulai')->nullable();
+            $table->date('tgl_selesai')->nullable();
             $table->enum('tingkat',['Tingkat Internasional','Tingkat Nasional', 'Tingkat Regional' ,'Tingkat Universitas','Tingkat Provinsi','Tingkat Kota']);
             $table->integer('jumlah_PT')->nullable();
             $table->integer('jumlah_peserta')->nullable();

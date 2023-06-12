@@ -107,16 +107,17 @@ Dashboard
           <label class="block text-sm mt-4">
             <span class="text-gray-700 dark:text-gray-400">Tanggal Mulai</span>
             <input class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-textarea focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
-              rows="8" type="date" placeholder="Masukkan Tanggal Mulai Kegiatan" value="{{ old('tgl_mulai')}}" required
+              rows="8" type="date" placeholder="Masukkan Tanggal Mulai Kegiatan"  value="{{ old('tgl_mulai')}}"
               name="tgl_mulai">
           </label>
           
           <label class="block text-sm mt-4">
             <span class="text-gray-700 dark:text-gray-400">Tanggal Selesai</span>
             <input class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-textarea focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
-              rows="8" type="date" placeholder="Masukkan Tanggal Selesai Kegiatan" value="{{ old('tgl_mulai')}}" required
-              name="tgl_selesai">
+              rows="8" type="date" placeholder="Masukkan Tanggal Selesai Kegiatan"
+              name="tgl_selesai" value="{{ old('tgl_selesai') }}">
           </label>
+          
           <label for="waktu_perolehan" class="block mt-4 text-sm">
             <span class="text-gray-700 dark:text-gray-400">Tahun Perolehan</span>
             <select class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-textarea focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"

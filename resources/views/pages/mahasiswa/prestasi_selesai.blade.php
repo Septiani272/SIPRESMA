@@ -30,7 +30,7 @@ Data Prestasi
           <thead>
             <tr
               class="text-center text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-
+              <th class="px-4 py-3">No</th>
               <th class="px-4 py-3">Nama Kegiatan</th>
               <th class="px-4 py-3">Waktu Perolehan</th>
               <th class="px-4 py-3">Tingkat</th>
@@ -40,8 +40,12 @@ Data Prestasi
             </tr>
           </thead>
           <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+            @php
+            $no = 1; 
+          @endphp
             @forelse ($items as $item)
             <tr class="text-center text-gray-700 dark:text-gray-400">
+              <td scope="row">{{ $no++ }}</td>
               <td>{{$item->nama_kegiatan}}</td>
               <td>{{$item->waktu_perolehan}}</td>
               <td>{{$item->tingkat}}</td>
